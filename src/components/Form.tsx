@@ -20,8 +20,6 @@ export const Form = (): ReactElement => {
   const passwordsMatch = formValues.password === formValues.confirmPassword;
   const canSubmit = passwordValid && passwordsMatch;
 
-  if (canSubmit) {
-  }
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormValues((prev) => ({
