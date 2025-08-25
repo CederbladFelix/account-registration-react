@@ -1,8 +1,12 @@
 #submit {
   padding: 1rem;
-  background-color: green;
+  background-color: gray;
   color: white;
   border-radius: var(--border-radius);
   border: none;
   font-size: 1rem;
+}
+
+#submit.active {
+  background-color: green;
 }

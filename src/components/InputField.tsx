@@ -1,14 +1,35 @@
-import type { ReactElement } from "react";
+import { type ReactElement } from "react";
 
 interface InputFieldProps {
+  inputId: string;
   label: string;
+  name: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const InputField = ({label}: InputFieldProps): ReactElement => {
+export const InputField = ({
+  inputId,
+  label,
+  name,
+  value,
+  onChange,
+}: InputFieldProps): ReactElement => {
   return (
     <section className="input-group">
-      <input type="text" placeholder={label} className="input-box"></input>
-      <label htmlFor={label} className="label">{label}</label>
+      <input
+        name={name}
+        id={inputId}
+        type="text"
+        placeholder=" "
+        value={value}
+        onChange={onChange}
+        className="input-box"
+        required
+      />
+      <label htmlFor={inputId} className="label">
+        {label}
+      </label>
     </section>
   );
 };
