@@ -1,0 +1,11 @@
+.input-group {
+    color: var(--main-color);
+}
+
+.input-group input {
+    width: 100%;
+}
+
+.label {
+
+}
